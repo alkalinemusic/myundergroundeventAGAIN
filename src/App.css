@@ -52,3 +52,8 @@
     font-size: 3.5em; /* Slightly increased for desktop */
   }
 }
+
+.primary-home-btn {
+  background-color: var(--fourth-color);
+  color: var(--text-off-white);
+}

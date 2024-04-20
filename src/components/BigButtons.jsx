@@ -6,8 +6,12 @@ export default function BigButtons() {
     <div>
       BigButtons
       <Flex gap="small" wrap="wrap">
-        <Button type="primary">I am looking for an event</Button>
-        <Button type="primary">I want to post an event</Button>
+        <Button className="primary-home-btn" type="primary">
+          I am looking for an event
+        </Button>
+        <Button className="primary-home-btn" type="primary">
+          I want to post an event
+        </Button>
       </Flex>
     </div>
   );

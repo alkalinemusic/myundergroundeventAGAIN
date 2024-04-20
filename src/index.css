@@ -3,14 +3,15 @@
   --primary-color: #646cff;
   --background-color: #242424;
   --text-color: #fcb667;
+  --text-off-white: #f8f8f8;
   --button-bg: #f9f9f9;
   --border-radius: 8px;
-  /* #fcb667
-  #d8816f
-  #995d6c
-  #554252
-  #f9f871
-  #242424 */
+  --first-color: #fcb667; /* Given */
+  --second-color: #d8816f; /* Next in sequence */
+  --third-color: #995d6c; /* Following */
+  --fourth-color: #554252; /* Continuing */
+  --fifth-color: #f9f871; /* Another */
+  --sixth-color: #242424; /* Ending the sequence */
 }
 
 body {
