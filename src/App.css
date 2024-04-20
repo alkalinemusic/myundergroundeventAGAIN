@@ -55,7 +55,7 @@
 
 .home-btn-group {
 }
-
+/* 
 .primary-home-btn {
   background-color: var(--fourth-color);
   color: var(--text-off-white);
@@ -80,3 +80,11 @@
   font-size: 24px; /* Large font size */
   padding: 0 20px; /* Horizontal padding, no vertical padding */
 }
+
+.primary-home-btn:active {
+  background-color: var(--fourth-color);
+}
+
+.primary-home-btn:after {
+  background-color: var(--fourth-color);
+} */

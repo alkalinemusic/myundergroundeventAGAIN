@@ -1,12 +1,11 @@
 .button-container {
   display: flex;
-  flex-direction: column; /* Stack buttons vertically */
-  align-items: center; /* Center buttons horizontally */
-  /* justify-content: center; Center buttons vertically */
-  min-height: 100vh; /* Full viewport height */
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  min-height: 100vh;
   gap: 20px;
-  /* Space between buttons */
-  padding-top: 150px;
+  margin-top: 50%; /* Adds top margin to push content down */
 }
 
 .primary-home-btn {
@@ -15,12 +14,31 @@
   align-items: center; /* Center vertically */
   width: 100%; /* Full width as per your setting */
   height: 65px; /* Fixed height */
-  font-size: 26px; /* Large font size */
+  font-size: 24px; /* Large font size */
   padding: 0 20px; /* Horizontal padding, no vertical padding */
+  background-color: var(
+    --fourth-color
+  ); /* Using a variable for background color */
+  color: var(--text-off-white); /* Using a variable for text color */
+  border: none; /* Removing any default border */
+  outline: none; /* Removing outline to prevent focus highlight */
+  box-shadow: none; /* Ensures no shadow is applied */
 }
-.primary-home-btn:active {
-  background-color: var(--first-color);
-}
-.primary-home-btn::after {
-  background-color: var(--);
+
+/* Explicitly setting all possible states to maintain color consistency */
+.primary-home-btn:hover,
+.primary-home-btn:focus,
+.primary-home-btn:active,
+.primary-home-btn:focus-visible, /* Handling focus-visible specifically */
+.primary-home-btn:focus:hover,
+.primary-home-btn:focus:active,
+.primary-home-btn:active:focus-visible {
+  background-color: var(
+    --fourth-color
+  ) !important; /* Ensuring background color stays the same */
+  color: var(
+    --text-off-white
+  ) !important; /* Ensuring text color stays the same */
+  outline: none !important; /* Further ensuring no outline on focus */
+  box-shadow: none !important; /* Removing any focus shadow if not needed */
 }
