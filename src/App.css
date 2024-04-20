@@ -1,0 +1,54 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+} */
+/* Common layout adjustments for mobile */
+/* Responsive Layout Adjustments */
+@media (min-width: 390px) {
+  .container {
+    max-width: 390px;
+  }
+}
+
+@media (min-width: 393px) {
+  .container {
+    max-width: 393px;
+  }
+}
+
+@media (min-width: 412px) {
+  .container {
+    max-width: 412px;
+  }
+}
+
+@media (min-width: 414px) {
+  .container {
+    max-width: 414px;
+  }
+  h1 {
+    font-size: 3em; /* Adjusted for larger mobile devices */
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --background-color: #f0f0f0;
+    --button-bg: #e0e0e0;
+  }
+
+  body {
+    text-align: left;
+    padding: 2rem 5%;
+  }
+
+  .container {
+    max-width: 960px; /* A reasonable max width for content on larger screens */
+  }
+
+  h1 {
+    font-size: 3.5em; /* Slightly increased for desktop */
+  }
+}

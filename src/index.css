@@ -1,0 +1,33 @@
+/* Base, mobile-first styles */
+:root {
+  --primary-color: #646cff;
+  --background-color: #242424;
+  --text-color: #fcb667;
+  --button-bg: #f9f9f9;
+  --border-radius: 8px;
+  /* #fcb667
+  #d8816f
+  #995d6c
+  #554252
+  #f9f871
+  #242424 */
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  margin: 0;
+  padding: 2rem;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.8em; /* Optimized font size for mobile */
+}
+
+.container {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+}
