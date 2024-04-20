@@ -1,0 +1,26 @@
+.button-container {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: center; /* Center buttons horizontally */
+  /* justify-content: center; Center buttons vertically */
+  min-height: 100vh; /* Full viewport height */
+  gap: 20px;
+  /* Space between buttons */
+  padding-top: 150px;
+}
+
+.primary-home-btn {
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  width: 100%; /* Full width as per your setting */
+  height: 65px; /* Fixed height */
+  font-size: 26px; /* Large font size */
+  padding: 0 20px; /* Horizontal padding, no vertical padding */
+}
+.primary-home-btn:active {
+  background-color: var(--first-color);
+}
+.primary-home-btn::after {
+  background-color: var(--);
+}
