@@ -32,3 +32,15 @@ h1 {
   max-width: 360px;
   margin: 0 auto;
 }
+
+.route-links {
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-page-header {
+  color: var(--text-color);
+}

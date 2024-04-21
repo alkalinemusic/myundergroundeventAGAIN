@@ -71,7 +71,8 @@
   margin-top: 20%; /* Adds top margin to push content down */
 }
 
-.primary-home-btn {
+.primary-home-btn,
+a {
   display: flex; /* Enable flexbox */
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
