@@ -6,13 +6,15 @@
   min-height: 100vh;
   gap: 20px;
   margin-top: 50%; /* Adds top margin to push content down */
+  width: 100%;
 }
 
 .primary-home-btn {
   display: flex; /* Enable flexbox */
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
-  width: 100%; /* Full width as per your setting */
+  min-width: 306px; /* Ensures all buttons are at least 250px wide */
+  /* width: 100%; Full width as per your setting */
   height: 65px; /* Fixed height */
   font-size: 24px; /* Large font size */
   padding: 0 20px; /* Horizontal padding, no vertical padding */
@@ -23,6 +25,9 @@
   border: none; /* Removing any default border */
   outline: none; /* Removing outline to prevent focus highlight */
   box-shadow: none; /* Ensures no shadow is applied */
+  white-space: nowrap; /* Prevents text from wrapping */
+  overflow: hidden; /* Prevents text from overflowing */
+  text-overflow: ellipsis; /* Adds an ellipsis if text overflows */
 }
 
 /* Explicitly setting all possible states to maintain color consistency */

@@ -1,21 +1,25 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
+import BigButtons from "../src/components/BigButtons";
+import About from "./pages/About";
+import FindEvent from "./pages/FindEvent";
+import PostEvent from "./pages/PostEvent";
 import "./index.css";
 import "./App.css";
 // Make sure to uncomment and import these components if they are used.
 // import Home from "./components/Home";
-// import About from "./components/About";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <BrowserRouter>
       <Header />
       <Routes>
+        <Route path={"/"} element={<BigButtons />} />
         {/* Ensure these are using the `element` prop for React Router v6 */}
-        {/* <Route path="/about" element={<About />} /> */}
+        <Route path={"/about"} element={<About />} />
+        <Route path={"/findevent"} element={<FindEvent />} />
+        <Route path={"/postevent"} element={<PostEvent />} />
         {/* <Route path="/" element={<Home />} /> */}
       </Routes>
     </BrowserRouter>
