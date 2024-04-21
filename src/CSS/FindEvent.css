@@ -1,29 +1,46 @@
-/* FindEvent.css */
-.custom-popup-class {
-    background-color: #f0f0f0; /* Light grey background */
-    color: #333; /* Dark grey text */
-    padding: 10px; /* Padding around the content */
-    border-radius: 5px; /* Rounded corners */
+:root {
+  --fourth-color: #554252; /* Example color, adjust as necessary */
 }
 
-
+/* FindEvent.css */
+.custom-popup-class {
+  background-color: #f0f0f0; /* Light grey background */
+  color: #333; /* Dark grey text */
+  padding: 10px; /* Padding around the content */
+  border-radius: 5px; /* Rounded corners */
+}
 
 .range-picker-custom {
   width: 160px;
   margin-bottom: 10px;
 }
 
-.form-container {
-    padding-left: 30px;  /* Reduce or adjust padding to push content to the left */
-    text-align: left; /* Ensure text aligns to the left if not already */
+.zip-input,
+.radius-input {
+  margin-bottom: 10px;
+  width: 65px;
 }
 
-.start-date-header, 
-.end-date-header {
-    margin-bottom: 5px;
+.form-container {
+  padding-left: 30px; /* Reduce or adjust padding to push content to the left */
+  text-align: left; /* Ensure text aligns to the left if not already */
 }
-/* Add this to your App.css or a similar file */
-/* 
+
+.start-date-header,
+.end-date-header,
+.zip-input,
+.location-input-header,
+.radius-input-header {
+  margin-bottom: 5px;
+}
+
+.radius-input-header {
+  margin-left: 32px;
+}
+
+.radius-input {
+  margin-left: 30px;
+}
 /* General styles for the popup container */
 .ant-picker-panel-container,
 .ant-picker-panel {
@@ -56,4 +73,65 @@
 /* Adjust width of the input box itself, if necessary */
 .ant-picker-input > input {
   height: 32px; /* Smaller input field height */
-} */
+}
+.zip-input {
+  /* flex: 0; Each input takes equal space in the flex container */
+  width: 65px;
+}
+
+.radius-input-header,
+.radius-input {
+  flex-grow: 1;
+  margin-left: 0px; /* Remove left margin if not needed */
+}
+
+.radius-input-header {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.radius-input-label {
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.radius-picker {
+  margin-top: 5px;
+}
+
+/* Add this to your FindEvent.css */
+.search-button-find-event {
+  display: flex; /* Enables flexbox layout */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  width: 100%; /* Takes full width of its container */
+  margin-top: 20px; /* Adds some space above the button */
+}
+
+/* FindEvent.css */
+.find-event-search-button {
+  background-color: var(--fourth-color); /* Sets the background color */
+  border-color: var(--fourth-color); /* Sets the border color */
+  color: #fff; /* Sets the text color to white for better readability */
+  outline: none; /* Removes the outline to prevent focus highlight */
+}
+
+.find-event-search-button:hover,
+.find-event-search-button:focus,
+.find-event-search-button:active,
+.find-event-search-button:focus-visible {
+  /* Handles focus styles for accessibility */
+  background-color: var(
+    --fourth-color
+  ) !important; /* Ensures the color stays the same */
+  border-color: var(
+    --fourth-color
+  ) !important; /* Keeps the border color consistent */
+  color: #fff !important; /* Ensures text color does not change */
+  box-shadow: none !important; /* Removes any shadows applied by default */
+}
+
+/* Optional: If using CSS for shadow or other effects, remove this block if not needed */
+.find-event-search-button:after {
+  background-color: var(--fourth-color);
+}
