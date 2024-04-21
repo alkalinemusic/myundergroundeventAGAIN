@@ -1,19 +1,19 @@
+// FindEvent.js
 import React from "react";
-import { DatePicker, Radio, Space } from "antd";
+import { DatePicker, Input, Button } from "antd";
 import "../CSS/FindEvent.css";
-import dayjs from "dayjs"; // Import dayjs. the maxDate property expects this AntD
+import dayjs from "dayjs";
+import RadiusPicker from "../components/RadiusPicker";
+import EventType_FindEvent from "../components/EventType_FindEvent";
 
-// Using dayjs to create the date objects
-const minDate = dayjs().subtract(1, "day"); // Yesterday as minDate
-const maxEndDate = dayjs(); // Today as the max end date
+const minDate = dayjs().subtract(1, "day");
+const maxEndDate = dayjs();
 
 function disabledStartDate(current) {
-  // Disable all dates before the minimum date
   return current && current.isBefore(minDate, "day");
 }
 
 function disabledEndDate(current) {
-  // Disable all dates after today for the end date
   return current && current.isAfter(maxEndDate, "day");
 }
 
@@ -27,49 +27,29 @@ export default function FindEvent() {
           popupClassName="custom-popup-class"
           className="range-picker-custom"
           disabledDate={disabledStartDate}
-          size={"small"}
+          placeholder="Start Date"
+          size="small"
         />
         <div className="end-date-header">End Date</div>
         <DatePicker
           popupClassName="custom-popup-class"
           className="range-picker-custom"
-          maxDate={maxEndDate}
-          size={"small"}
+          disabledDate={disabledEndDate}
+          placeholder="End Date"
+          size="small"
         />
+        <div className="location-and-radius-container">
+          <div className="location-input-header">Location</div>
+          <Input className="zip-input" placeholder="Zip" />
+          <RadiusPicker />
+          <EventType_FindEvent />
+        </div>
+        <div className="search-button-find-event">
+          <Button className="find-event-search-button" type="primary">
+            Search
+          </Button>
+        </div>
       </div>
     </div>
   );
 }
-
-// import React, { useState } from 'react';
-// import type { ConfigProviderProps, RadioChangeEvent } from 'antd';
-// import { DatePicker, Radio, Space } from 'antd';
-// import FindEvent from "./FindEvent";
-
-// type SizeType = ConfigProviderProps['componentSize'];
-
-// const { RangePicker } = DatePicker;
-
-// const App: React.FC = () => {
-//   const [size, setSize] = useState<SizeType>('middle');
-
-//   const handleSizeChange = (e: RadioChangeEvent) => {
-//     setSize(e.target.value);
-//   };
-
-//   return (
-//     <Space direction="vertical" size={12}>
-//       <Radio.Group value={size} onChange={handleSizeChange}>
-//         <Radio.Button value="large">Large</Radio.Button>
-//         <Radio.Button value="middle">middle</Radio.Button>
-//         <Radio.Button value="small">Small</Radio.Button>
-//       </Radio.Group>
-//       <DatePicker size={size} />
-//       <DatePicker size={size} picker="month" />
-//       <RangePicker size={size} />
-//       <DatePicker size={size} picker="week" />
-//     </Space>
-//   );
-// };
-
-// export default App;
