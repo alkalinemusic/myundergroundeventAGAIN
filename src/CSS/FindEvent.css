@@ -1,0 +1,59 @@
+/* FindEvent.css */
+.custom-popup-class {
+    background-color: #f0f0f0; /* Light grey background */
+    color: #333; /* Dark grey text */
+    padding: 10px; /* Padding around the content */
+    border-radius: 5px; /* Rounded corners */
+}
+
+
+
+.range-picker-custom {
+  width: 160px;
+  margin-bottom: 10px;
+}
+
+.form-container {
+    padding-left: 30px;  /* Reduce or adjust padding to push content to the left */
+    text-align: left; /* Ensure text aligns to the left if not already */
+}
+
+.start-date-header, 
+.end-date-header {
+    margin-bottom: 5px;
+}
+/* Add this to your App.css or a similar file */
+/* 
+/* General styles for the popup container */
+.ant-picker-panel-container,
+.ant-picker-panel {
+  width: 250px; /* Adjust width to fit smaller cells or set a specific width */
+}
+
+/* Reduce the size of each date cell */
+.ant-picker-cell {
+  width: 24px; /* Reduced from default, adjust as necessary */
+  height: 24px; /* Reduced from default, adjust as necessary */
+  line-height: 24px; /* Aligns text vertically */
+}
+
+/* Adjust the font size within the cells */
+.ant-picker-cell-inner {
+  font-size: 12px; /* Smaller text to match smaller cells */
+}
+
+/* Optional: Adjust the overall font size of the picker if needed */
+.ant-picker {
+  font-size: 14px; /* Smaller font size for all text in the picker */
+}
+
+/* Adjust header buttons and text sizes */
+.ant-picker-header-view,
+.ant-picker-header > button {
+  font-size: 10px; /* Smaller buttons and text in the header */
+}
+
+/* Adjust width of the input box itself, if necessary */
+.ant-picker-input > input {
+  height: 32px; /* Smaller input field height */
+} */
