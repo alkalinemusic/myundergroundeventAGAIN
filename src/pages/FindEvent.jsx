@@ -14,7 +14,7 @@ function disabledStartDate(current) {
 }
 
 function disabledEndDate(current) {
-  return current && current.isAfter(maxEndDate, "day");
+  return current && current.isBefore(maxEndDate, "day");
 }
 
 export default function FindEvent() {
