@@ -15,7 +15,7 @@ export default function Header() {
             <span>About</span>
           </Link>
         </div>
-        <div>
+        {/* <div>
           <Link className="route-links" to="/findevent">
             Find an Event
           </Link>
@@ -24,7 +24,7 @@ export default function Header() {
           <Link className="route-links" to="/postevent">
             Post an Event
           </Link>
-        </div>
+        </div> */}
       </div>
     </div>
   );
