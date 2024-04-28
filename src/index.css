@@ -60,7 +60,9 @@ h1 {
 .route-links {
   color: var(--text-color);
   position: absolute;
-  bottom: -375px;
+  bottom: -395px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 a {
