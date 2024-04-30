@@ -41,8 +41,9 @@ export default function RadiusPicker() {
           <Space wrap>
             <Select
               defaultValue="0"
+              className=""
               style={{
-                width: 50,
+                width: 294,
               }}
               onChange={handleChange}
               options={[
