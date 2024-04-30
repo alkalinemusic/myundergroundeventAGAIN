@@ -25,7 +25,7 @@ export default function FindEvent() {
         <div className="start-date-header">Start Date</div>
         <DatePicker
           popupClassName="custom-popup-class"
-          className="range-picker-custom"
+          className="input-field"
           disabledDate={disabledStartDate}
           placeholder="Start Date"
           size="small"
@@ -33,14 +33,14 @@ export default function FindEvent() {
         <div className="end-date-header">End Date</div>
         <DatePicker
           popupClassName="custom-popup-class"
-          className="range-picker-custom"
+          className="input-field"
           disabledDate={disabledEndDate}
           placeholder="End Date"
           size="small"
         />
         <div className="location-and-radius-container">
           <div className="location-input-header">Location</div>
-          <Input className="zip-input" placeholder="Zip" />
+          <Input className="input-field" placeholder="Zip" />
           <RadiusPicker />
           <EventType_FindEvent />
         </div>

@@ -42,7 +42,7 @@
 
 .form-container {
   padding-left: 30px; /* Reduce or adjust padding to push content to the left */
-  text-align: left; /* Ensure text aligns to the left if not already */
+  /* text-align: left; Ensure text aligns to the left if not already */
 }
 
 .event-location-header,

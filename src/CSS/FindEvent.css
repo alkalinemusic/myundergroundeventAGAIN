@@ -10,6 +10,11 @@
   border-radius: 5px; /* Rounded corners */
 }
 
+.input-field {
+  width: auto;
+  margin-bottom: 10px;
+}
+
 .range-picker-custom {
   width: 160px;
   margin-bottom: 10px;
@@ -23,7 +28,7 @@
 
 .form-container {
   padding-left: 30px; /* Reduce or adjust padding to push content to the left */
-  text-align: left; /* Ensure text aligns to the left if not already */
+  /* text-align: left; Ensure text aligns to the left if not already */
 }
 
 .start-date-header,
@@ -71,8 +76,10 @@
 }
 
 /* Adjust width of the input box itself, if necessary */
-.ant-picker-input > input {
+.ant-picker-input > input,
+.input-field {
   height: 32px; /* Smaller input field height */
+  width: 100%;
 }
 .zip-input {
   /* flex: 0; Each input takes equal space in the flex container */
