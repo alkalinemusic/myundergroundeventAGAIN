@@ -1,0 +1,31 @@
+.search-results-h3 {
+  margin-top: 85px;
+}
+
+.search-results-section {
+}
+
+.row-header {
+}
+
+.row-container {
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.social-link {
+  color: var(--second-color);
+  box-shadow: 1px 1px 1px black;
+}
+
+.flyer-poster-one {
+  margin-bottom: 25px;
+}
+
+.flyer-poster-two {
+  margin-bottom: 45px;
+}
+
+.artist-name-header {
+  font-size: 20px;
+}
