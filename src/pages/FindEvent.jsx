@@ -5,6 +5,7 @@ import "../CSS/FindEvent.css";
 import dayjs from "dayjs";
 import RadiusPicker from "../components/RadiusPicker";
 import EventType_FindEvent from "../components/EventType_FindEvent";
+import SearchResults from "./../components/SearchResults";
 
 const minDate = dayjs().subtract(1, "day");
 const maxEndDate = dayjs();
@@ -49,6 +50,7 @@ export default function FindEvent() {
             Search
           </Button>
         </div>
+        <SearchResults />
       </div>
     </div>
   );
