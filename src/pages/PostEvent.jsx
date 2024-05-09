@@ -50,6 +50,7 @@ export default function PostEvent() {
       <Input className="event-flyer-input" placeholder="Flyer/Poster" />
       <div className="organizer-email-header">Organizer Email</div>
       <Input className="organizer-email-input" placeholder="Organizer Email" />
+      {/* ADD EVENT DESCRIPTION. CHECK EVENTBRITE EVENT DETAILS PAGES */}
     </div>
   );
 }
