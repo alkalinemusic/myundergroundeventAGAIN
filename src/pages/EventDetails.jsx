@@ -6,32 +6,37 @@ import localImageTwo from "../assets/IMG-20240429-WA0003.jpg";
 
 export default function EventDetails() {
   return (
-    <div>
+    <div className="event-details-main">
       <h3 className="search-results-h3">Faro Cafe: A Night of Techno</h3>
+      <div className="artist-name-header">
+        <span className="artist-header row-header ">{/* Who */}</span>
+        <span className="with-abbr">w/&nbsp;&nbsp;</span>NXOR, NoizCode, Switch
+        Angel
+      </div>
       <div className="search-results-section">
-        <Image.PreviewGroup
-          preview={{
-            onChange: (current, prev) =>
-              console.log(`current index: ${current}, prev index: ${prev}`),
-          }}
-        >
-          <Image className="flyer-poster-one" width={250} src={localImageOne} />
-          <Image className="flyer-poster-two" width={250} src={localImageTwo} />
-        </Image.PreviewGroup>
-        <div className="row-container artist-name-header">
-          <span className="row-header ">{/* Who */}</span>
-          NXOR, NoizCode, Switch Angel
-        </div>
-        <div className="row-container">
-          <span className="row-header">{/* When */}</span>
-          June 25th 8pm
-        </div>
-        <div className="row-container">
-          <span className="row-header">{/* Where */}</span>
-          Zuzu Middle East&nbsp;&nbsp;{" "}
-          <span>474 Massachusetts Ave, Cambridge, MA 02139</span>
+        <div className="where-header">Where</div>
+        <hr className="style-four-a" />
+
+        <div className="venue-name-container">
+          <span className="row-header-venue ">
+            <span className="venue">Zuzu Middle East</span>
+            <br />
+            474 Massachusetts Ave
+            <br />
+            Cambridge, MA 02139
+          </span>
         </div>
 
+        <div className="when-header">When</div>
+        <hr className="style-four-a" />
+
+        <div className="venue-when-container">
+          <span className="row-header-when">
+            <span className="when">June 25th 8pm</span>
+          </span>
+        </div>
+        {/*  THIS HR IS TEMPORARY */}
+        <hr />
         <div className="row-container">
           <span className="row-header">$12 at door/ $8 RSVP</span>
         </div>
@@ -73,6 +78,15 @@ export default function EventDetails() {
         <div className="row-container">
           <span className="row-header">organizer@eventemail.com</span>
         </div>
+        <Image.PreviewGroup
+          preview={{
+            onChange: (current, prev) =>
+              console.log(`current index: ${current}, prev index: ${prev}`),
+          }}
+        >
+          <Image className="flyer-poster-one" width={250} src={localImageOne} />
+          <Image className="flyer-poster-two" width={250} src={localImageTwo} />
+        </Image.PreviewGroup>
       </div>
     </div>
   );

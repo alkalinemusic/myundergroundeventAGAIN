@@ -1,13 +1,23 @@
+.event-details-main {
+  font-size: 13px;
+}
+
 .search-results-h3 {
-  margin-top: 85px;
+  font-size: 25px;
+  margin-top: 65px;
 }
 
 .search-results-section {
 }
 
-.row-header {
+/* hr line */
+.style-four-a {
+  height: 12px;
+  border: 0;
+  width: 8%;
+  margin-left: 3px;
+  box-shadow: inset 0 7px 6px -9px var(--second-color);
 }
-
 .row-container {
   text-align: left;
   margin-bottom: 8px;
@@ -28,4 +38,29 @@
 
 .artist-name-header {
   font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.where-header,
+.when-header {
+  color: var(--second-color);
+  text-align: left;
+  margin-bottom: -3px;
+  font-size: 11px;
+}
+
+.venue-name-container,
+.venue-when-container {
+  margin-bottom: 25px !important;
+  text-align: left;
+}
+
+.venue,
+.where-header,
+.when-header {
+  font-weight: 600;
+}
+
+.with-abbr {
+  font-size: 11px;
 }
