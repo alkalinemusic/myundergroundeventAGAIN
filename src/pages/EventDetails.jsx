@@ -14,70 +14,83 @@ export default function EventDetails() {
         Angel
       </div>
       <div className="search-results-section">
-        <div className="where-header">Where</div>
-        <hr className="style-four-a" />
+        <section className="section-one-container">
+          <div className="where-header">Where</div>
+          <hr className="style-four-a" />
+          <div className="venue-name-container">
+            <span className="row-header-venue ">
+              <span className="venue">Zuzu Middle East</span>
+              <br />
+              474 Massachusetts Ave
+              <br />
+              Cambridge, MA 02139
+            </span>
+          </div>
+          <div className="when-header">When</div>
+          <hr className="style-four-a" />
+          <div className="venue-when-container">
+            <span className="row-header-when">
+              <span className="when">June 25th 8pm</span>
+            </span>
+          </div>
+        </section>
+        <section className="section-two-plus-descripton">
+          <section className="section-two-container row">
+            <section className="section-two-left column">
+              <div className="row-container">
+                <span className="row-header">$12 at door/ $8 RSVP</span>
+              </div>
+              <div className="row-container">
+                <span className="row-header">21+</span>
+              </div>
+              <div className="row-container">
+                <span className="row-header">Music Event</span>
+              </div>
+              <div className="row-container">
+                <span className="row-header">Techno</span>
+              </div>
+            </section>
+            <section className="section-two-left column">
+              <div className="row-container">
+                <span className="row-header">
+                  {/* <stron>Event social links&nbsp;&nbsp;&nbsp;</stron g> */}
+                </span>
+                <Link
+                  className="social-link"
+                  to="https://www.facebook.com/photo?fbid=1143031680445301&set=a.1143031697111966"
+                >
+                  Event Info
+                </Link>
+              </div>
+              <div className="row-container">
+                <span className="row-header">{/* Artist social links */}</span>
+                <Link
+                  className="social-link"
+                  to="https://www.instagram.com/noizcode/"
+                >
+                  Artist Info
+                </Link>
+              </div>
+              <div className="row-container">
+                <span className="row-header">organizer@eventemail.com</span>
+              </div>
+            </section>
+            {/* <div className="row-container">
+                <span className="row-header">
+                  Flyer
+                </span>
+              </div> */}
+          </section>
+          <div className="event-description-container">
+            <div className="event-description">
+              Faro Cafe presents a night of immersive techno with NXOR,
+              NoizCode, and Switch Angel. Join us at Zuzu Middle East for a
+              night where the music speaks for itself and the dance floor
+              becomes your sanctuary.
+            </div>
+          </div>
+        </section>
 
-        <div className="venue-name-container">
-          <span className="row-header-venue ">
-            <span className="venue">Zuzu Middle East</span>
-            <br />
-            474 Massachusetts Ave
-            <br />
-            Cambridge, MA 02139
-          </span>
-        </div>
-
-        <div className="when-header">When</div>
-        <hr className="style-four-a" />
-
-        <div className="venue-when-container">
-          <span className="row-header-when">
-            <span className="when">June 25th 8pm</span>
-          </span>
-        </div>
-        {/*  THIS HR IS TEMPORARY */}
-        <hr />
-        <div className="row-container">
-          <span className="row-header">$12 at door/ $8 RSVP</span>
-        </div>
-        <div className="row-container">
-          <span className="row-header">Music Event</span>
-        </div>
-        <div className="row-container">
-          <span className="row-header">21+</span>
-        </div>
-        <div className="row-container">
-          <span className="row-header">Techno</span>
-        </div>
-        {/* <div className="row-container">
-          <span className="row-header">
-            Flyer
-          </span>
-        </div> */}
-
-        <div className="row-container">
-          <span className="row-header">
-            {/* <stron>Event social links&nbsp;&nbsp;&nbsp;</stron g> */}
-          </span>
-          <Link
-            className="social-link"
-            to="https://www.facebook.com/photo?fbid=1143031680445301&set=a.1143031697111966"
-          >
-            Event Info
-          </Link>
-        </div>
-        <div className="row-container">
-          <span className="row-header">{/* Artist social links */}</span>
-          <Link
-            className="social-link"
-            to="https://www.instagram.com/noizcode/"
-          >
-            Artist Info
-          </Link>
-        </div>
-        <div className="row-container">
-          <span className="row-header">organizer@eventemail.com</span>
-        </div>
         <Image.PreviewGroup
           preview={{
             onChange: (current, prev) =>

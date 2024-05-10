@@ -23,8 +23,42 @@
   margin-bottom: 8px;
 }
 
+.row {
+  display: flex;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 10px 0 20px 0;
+  height: auto; /* Should be removed. Only for demonstration */
+}
+
+.section-one-container {
+  background-color: var(--eighth-color);
+  padding: 12px;
+  height: 200px;
+}
+
+.section-two-container {
+  padding: 12px 12px 0 12px;
+  /* height: 200px; */
+  /* margin-bottom: 40px; */
+}
+
+.section-two-plus-descripton {
+  background-color: var(--seventh-color);
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: var(--fifth-color);
+}
+
 .social-link {
-  color: var(--second-color);
+  color: var(--fifth-color);
   box-shadow: 1px 1px 1px black;
 }
 
@@ -59,8 +93,32 @@
 .where-header,
 .when-header {
   font-weight: 600;
+  line-height: 1.3em;
 }
 
+/* .event-description {
+  width: 80%;
+}
+
+.event-description-container {
+  text-align: center;
+} */
+
+.event-description-container {
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* padding: 20px; */
+}
+
+.event-description {
+  max-width: 85%;
+  font-size: 1em;
+  line-height: 1.5em;
+}
 .with-abbr {
   font-size: 11px;
 }
