@@ -12,6 +12,8 @@
   --fourth-color: #554252; /* Continuing */
   --fifth-color: #f9f871; /* Another */
   --sixth-color: #242424; /* Ending the sequence */
+  --seventh-color: #2e242d;
+  --eighth-color: #211a20;
 }
 
 .roboto-regular {
@@ -45,6 +47,7 @@ body {
   color: var(--text-color);
   background-color: var(--background-color);
   text-align: center;
+  box-sizing: border-box;
 }
 
 h1 {
