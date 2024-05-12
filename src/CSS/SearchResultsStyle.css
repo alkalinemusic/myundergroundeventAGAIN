@@ -1,0 +1,29 @@
+* {
+  font-size: 13px;
+}
+.border-top-line {
+  border-bottom: 4px solid var(--eighth-color);
+  margin-bottom: 8px;
+}
+
+.result-detail-container {
+  text-align: left;
+  border-bottom: 4px solid var(--eighth-color);
+}
+
+.detail-date {
+}
+.detail-title {
+  font-size: 16px;
+  color: var(--text-off-white);
+}
+.detail-artists {
+}
+.detail-venue {
+}
+.detail-date,
+.detail-title,
+.detail-artists,
+.detail-venue {
+  margin-bottom: 15px;
+}
