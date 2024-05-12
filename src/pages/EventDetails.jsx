@@ -7,7 +7,7 @@ import localImageTwo from "../assets/IMG-20240429-WA0003.jpg";
 export default function EventDetails() {
   return (
     <div className="event-details-main">
-      <h3 className="search-results-h3">Faro Cafe: A Night of Techno</h3>
+      <h3 className="search-results-h3">A Night of Techno</h3>
       <div className="artist-name-header">
         <span className="artist-header row-header ">{/* Who */}</span>
         <span className="with-abbr">w/&nbsp;&nbsp;</span>NXOR, NoizCode, Switch

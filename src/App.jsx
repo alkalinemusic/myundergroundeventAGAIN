@@ -9,6 +9,7 @@ import "./index.css";
 import "./App.css";
 import EventDetails from "./pages/EventDetails";
 import SearchResults from "./pages/SearchResults";
+
 // Make sure to uncomment and import these components if they are used.
 // import Home from "./components/Home";
 
