@@ -46,6 +46,10 @@
   /* margin-bottom: 40px; */
 }
 
+.section-two-left > * {
+  margin-bottom: 16px;
+}
+
 .section-two-plus-descripton {
   background-color: var(--seventh-color);
 }
