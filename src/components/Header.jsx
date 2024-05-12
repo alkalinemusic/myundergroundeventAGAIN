@@ -11,6 +11,9 @@ export default function Header() {
       <Link className="header-page-header" to="/eventDetails/Id">
         <h6>Details test page</h6>
       </Link>
+      <Link className="header-page-header" to="/searchResults">
+        <h6>Search Results test page</h6>
+      </Link>
       <div>
         {/* FIXIT: these links will eventually go in the navbar */}
         <div>
