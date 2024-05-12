@@ -8,6 +8,7 @@ import PostEvent from "./pages/PostEvent";
 import "./index.css";
 import "./App.css";
 import EventDetails from "./pages/EventDetails";
+import SearchResults from "./pages/SearchResults";
 // Make sure to uncomment and import these components if they are used.
 // import Home from "./components/Home";
 
@@ -22,6 +23,7 @@ function App() {
         <Route path={"/findevent"} element={<FindEvent />} />
         <Route path={"/postevent"} element={<PostEvent />} />
         <Route path={"/eventDetails/id"} element={<EventDetails />} />
+        <Route path={"/searchResults"} element={<SearchResults />} />
         {/* <Route path="/" element={<Home />} /> */}
       </Routes>
     </BrowserRouter>
