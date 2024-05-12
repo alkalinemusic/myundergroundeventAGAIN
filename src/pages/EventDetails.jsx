@@ -51,10 +51,8 @@ export default function EventDetails() {
               </div>
             </section>
             <section className="section-two-left column">
-              <div className="row-container">
-                <span className="row-header">
-                  {/* <stron>Event social links&nbsp;&nbsp;&nbsp;</stron g> */}
-                </span>
+              {/* <div className="row-container">
+                <span className="row-header"></span>
                 <Link
                   className="social-link"
                   to="https://www.facebook.com/photo?fbid=1143031680445301&set=a.1143031697111966"
@@ -62,9 +60,10 @@ export default function EventDetails() {
                   Event Info
                 </Link>
               </div>
-              <div className="row-container">
-                <span className="row-header">{/* Artist social links */}</span>
-                <Link
+              <div className="row-container"> */}
+              {/* <span className="row-header">{/* Artist social links */}
+              {/* /</span> */}
+              {/* <Link
                   className="social-link"
                   to="https://www.instagram.com/noizcode/"
                 >
@@ -73,7 +72,8 @@ export default function EventDetails() {
               </div>
               <div className="row-container">
                 <span className="row-header">organizer@eventemail.com</span>
-              </div>
+              </div> */}
+              {/* {" "} */}
             </section>
             {/* <div className="row-container">
                 <span className="row-header">
@@ -100,6 +100,31 @@ export default function EventDetails() {
           <Image className="flyer-poster-one" width={250} src={localImageOne} />
           <Image className="flyer-poster-two" width={250} src={localImageTwo} />
         </Image.PreviewGroup>
+        <section className="social-media-links-section">
+          <div className="row-container">
+            <span className="row-header">
+              {/* <stron>Event social links&nbsp;&nbsp;&nbsp;</stron g> */}
+            </span>
+            <Link
+              className="social-link"
+              to="https://www.facebook.com/photo?fbid=1143031680445301&set=a.1143031697111966"
+            >
+              Event Info
+            </Link>
+          </div>
+          <div className="row-container">
+            <span className="row-header">{/* Artist social links */}</span>
+            <Link
+              className="social-link"
+              to="https://www.instagram.com/noizcode/"
+            >
+              Artist Info
+            </Link>
+          </div>
+          <div className="row-container">
+            <span className="row-header">organizer@eventemail.com</span>
+          </div>
+        </section>
       </div>
     </div>
   );
