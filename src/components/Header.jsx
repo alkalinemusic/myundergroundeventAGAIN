@@ -1,5 +1,5 @@
-import React from "react";
 import { Link } from "react-router-dom"; // Make sure this is imported
+import LoginButton from "./LoginButton";
 // import "../../src/index.css";
 
 export default function Header() {
@@ -21,6 +21,10 @@ export default function Header() {
             <span>About</span>
           </Link>
         </div>
+        <div className="login-button">
+          <LoginButton /> {/* Use the LoginButton component */}
+        </div>
+
         {/* <div>
           <Link className="route-links" to="/findevent">
             Find an Event

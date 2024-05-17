@@ -1,4 +1,3 @@
-import React from "react";
 import { TimePicker, DatePicker, Input, Button } from "antd";
 import dayjs from "dayjs";
 import "../CSS/PostEvent.css";

@@ -1,5 +1,4 @@
 // FindEvent.js
-import React from "react";
 import { DatePicker, Input, Button } from "antd";
 import "../CSS/FindEvent.css";
 import dayjs from "dayjs";

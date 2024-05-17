@@ -1,4 +1,3 @@
-import React from "react";
 import "../CSS/SearchResultsStyle.css";
 import EventDetails from "./EventDetails";
 
