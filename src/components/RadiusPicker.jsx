@@ -1,35 +1,34 @@
-import React from "react";
 import { Select, Space } from "antd";
 
 const handleChange = (value) => {
   console.log(`selected ${value}`);
 };
-const items = [
-  {
-    label: "0",
-    key: "0",
-  },
-  {
-    label: "1",
-    key: "1",
-  },
-  {
-    label: "5",
-    key: "3",
-  },
-  {
-    label: "10",
-    key: "4",
-  },
-  {
-    label: "25",
-    key: "5",
-  },
-  {
-    label: "50",
-    key: "6",
-  },
-];
+// const items = [
+//   {
+//     label: "0",
+//     key: "0",
+//   },
+//   {
+//     label: "1",
+//     key: "1",
+//   },
+//   {
+//     label: "5",
+//     key: "3",
+//   },
+//   {
+//     label: "10",
+//     key: "4",
+//   },
+//   {
+//     label: "25",
+//     key: "5",
+//   },
+//   {
+//     label: "50",
+//     key: "6",
+//   },
+// ];
 
 export default function RadiusPicker() {
   return (
