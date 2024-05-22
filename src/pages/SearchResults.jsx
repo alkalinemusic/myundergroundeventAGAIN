@@ -1,59 +1,72 @@
 import "../CSS/SearchResultsStyle.css";
 import EventDetails from "./EventDetails";
+import { Link } from "react-router-dom"; // Make sure this is imported
+
+const events = [
+  {
+    id: 1,
+    date: "May 12th",
+    title: "A Night of Techno",
+    artists: "NXOR, NoizCode, Switch Angel",
+    venue: "Faro Cafe",
+  },
+  {
+    id: 2,
+    date: "June 6th",
+    title: "A Night of Techno",
+    artists: "NXOR, NoizCode, Switch Angel",
+    venue: "Faro Cafe",
+  },
+  {
+    id: 3,
+    date: "July 12th",
+    title: "Summer Beats",
+    artists: "DJ Echo, BassHound, Lyra",
+    venue: "Sunset Lounge",
+  },
+  {
+    id: 4,
+    date: "August 15th",
+    title: "Electro Nights",
+    artists: "Electra, Pulse, Neon Dreams",
+    venue: "The Electric Room",
+  },
+  {
+    id: 5,
+    date: "September 20th",
+    title: "Rave Revival",
+    artists: "Beat Crusher, Sonic Boom, Vibe Tribe",
+    venue: "The Warehouse",
+  },
+  {
+    id: 6,
+    date: "October 31st",
+    title: "Halloween Howl",
+    artists: "Ghostly Grooves, Spooky Sounds, Cryptic DJ",
+    venue: "Mystery Mansion",
+  },
+];
 
 export default function SearchResults() {
+  const loopArrayObject = () => {
+    return events.map((event) => (
+      // this will need updating to accept the actual event ID
+      // to={`/event/${event.id}`}
+      <Link key={event.id} to="/eventDetails/Id">
+        <div key={event.id} className="result-detail-container">
+          <div className="border-top-line"></div>
+          <div className="detail-date">{event.date}</div>
+          <div className="detail-title">{event.title}</div>
+          <div className="detail-artists">{event.artists}</div>
+          <div className="detail-venue">{event.venue}</div>
+        </div>
+      </Link>
+    ));
+  };
+
   return (
     <section className="search-results-container">
-      <div className="result-detail-container">
-        <div className="border-top-line"></div>
-        <div className="detail-date">{}</div>
-        <div className="detail-title">A Night of Techno</div>
-        <div className="detail-artists">NXOR, NoizCode, Switch Angel</div>
-        <div className="detail-venue">Faro Cafe</div>
-      </div>
-      <div className="result-detail-container">
-        <div className="border-top-line"></div>
-        <div className="detail-date">June 6th</div>
-        <div className="detail-title">A Night of Techno</div>
-        <div className="detail-artists">NXOR, NoizCode, Switch Angel</div>
-        <div className="detail-venue">Faro Cafe</div>
-      </div>
-
-      <div className="result-detail-container">
-        <div className="border-top-line"></div>
-        <div className="detail-date">July 12th</div>
-        <div className="detail-title">Summer Beats</div>
-        <div className="detail-artists">DJ Echo, BassHound, Lyra</div>
-        <div className="detail-venue">Sunset Lounge</div>
-      </div>
-
-      <div className="result-detail-container">
-        <div className="border-top-line"></div>
-        <div className="detail-date">August 15th</div>
-        <div className="detail-title">Electro Nights</div>
-        <div className="detail-artists">Electra, Pulse, Neon Dreams</div>
-        <div className="detail-venue">The Electric Room</div>
-      </div>
-
-      <div className="result-detail-container">
-        <div className="border-top-line"></div>
-        <div className="detail-date">September 20th</div>
-        <div className="detail-title">Rave Revival</div>
-        <div className="detail-artists">
-          Beat Crusher, Sonic Boom, Vibe Tribe
-        </div>
-        <div className="detail-venue">The Warehouse</div>
-      </div>
-
-      <div className="result-detail-container">
-        <div className="border-top-line"></div>
-        <div className="detail-date">October 31st</div>
-        <div className="detail-title">Halloween Howl</div>
-        <div className="detail-artists">
-          Ghostly Grooves, Spooky Sounds, Cryptic DJ
-        </div>
-        <div className="detail-venue">Mystery Mansion</div>
-      </div>
+      <div>{loopArrayObject()}</div>
     </section>
   );
 }
