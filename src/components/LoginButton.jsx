@@ -4,17 +4,6 @@ import { supabase } from "./../lib/helper/supabaseClient";
 export default function LoginButton() {
   const [user, setUser] = useState(null);
 
-  const githubLogin = async () => {
-    await supabase.auth.signInWithOAuth({
-      provider: "github",
-    });
-  };
-
-  //   useEffect(() => {
-  //     const session = supabase.auth.session();
-  //     console.log("Session", session);
-  //   }, []);
-
   useEffect(() => {
     const fetchSession = async () => {
       const {
@@ -22,20 +11,52 @@ export default function LoginButton() {
         error,
       } = await supabase.auth.getSession();
       setUser(session?.user);
+      const { data: authListener } = supabase.auth.onAuthStateChange(
+        (event, session) => {
+          switch (event) {
+            case "SIGNED_IN":
+              setUser(session);
+              break;
+            case "SIGNED_OUT":
+              setUser(null);
+              break;
+            default:
+          }
+        }
+      );
       if (error) {
         console.error("Error fetching session:", error);
       } else {
         console.log("you did it!");
       }
-    };
 
-    fetchSession();
+      return authListener?.unsubscribe;
+    };
+    const unsubscribe = fetchSession();
+
+    return () => {
+      unsubscribe?.then((unsub) => unsub && unsub());
+    };
+    // fetchSession();
   }, []);
+
+  const githubLogin = async () => {
+    await supabase.auth.signInWithOAuth({
+      provider: "github",
+    });
+  };
+
+  const logout = async () => {
+    await supabase.auth.signOut();
+  };
 
   return (
     <div>
       {user ? (
-        <h3>Authenticated!</h3>
+        <div>
+          <h3>Authenticated!</h3>
+          <button onClick={logout}>Logout</button>
+        </div>
       ) : (
         <button onClick={githubLogin}>Login with Github</button>
       )}
