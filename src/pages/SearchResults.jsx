@@ -8,7 +8,7 @@ export default function SearchResults() {
     return data.events.map((event) => (
       // this will need updating to accept the actual event ID
       // to={`/event/${event.id}`}
-      <Link key={event.id} to="/eventDetails/Id">
+      <Link key={event.id} to={`/eventDetails/${event.id}`}>
         <div key={event.id} className="result-detail-container">
           <div className="border-top-line"></div>
           <div className="detail-date">{event.date}</div>
