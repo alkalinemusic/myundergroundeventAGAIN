@@ -61,6 +61,12 @@ a:active {
   color: var(--forth-color);
 }
 
+.social-links-ul {
+  list-style-type: none;
+  margin: 15px;
+  padding: 0;
+}
+
 .social-link {
   color: var(--fifth-color);
   box-shadow: 1px 1px 1px black;
