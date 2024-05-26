@@ -17,7 +17,7 @@ export default function EventDetails() {
     <div className="event-details-main">
       <h3 className="search-results-h3">{event.title}</h3>
       <div className="artist-name-header">
-        <span className="artist-header row-header">Who</span>
+        <span className="artist-header row-header"></span>
         <span className="with-abbr">w/&nbsp;&nbsp;</span>
         {event.artists}
       </div>
@@ -76,7 +76,7 @@ export default function EventDetails() {
             <Image
               key={index}
               src={picture}
-              alt={`Event ${event.id}`}
+              alt={`Picture for event ${event.name} not found`}
               className="flyer-poster-one"
             />
           ))}
@@ -87,23 +87,43 @@ export default function EventDetails() {
         <section className="social-media-links-section">
           <div className="row-container">
             <span className="row-header">
-              {/* <strong>Event social links&nbsp;&nbsp;&nbsp;</strong> */}
+              <strong>Event Info&nbsp;&nbsp;&nbsp;</strong>
             </span>
-            <Link
-              className="social-link"
-              to="https://www.facebook.com/photo?fbid=1143031680445301&set=a.1143031697111966"
-            >
-              Event Info
-            </Link>
+            <ul className="social-links-ul">
+              {Object.entries(event.organizerSocialMedia).map(
+                ([platform, link], index) => (
+                  <li key={index}>
+                    <a
+                      href={link}
+                      className="social-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {platform}
+                    </a>
+                  </li>
+                )
+              )}
+            </ul>
           </div>
           <div className="row-container">
-            <span className="row-header">{/* Artist social links */}</span>
-            <Link
-              className="social-link"
-              to="https://www.instagram.com/noizcode/"
-            >
-              Artist Info
-            </Link>
+            <span className="row-header">Artist social links</span>
+            <ul className="social-links-ul">
+              {Object.entries(event.artistsLinks).map(
+                ([artist, link], index) => (
+                  <li key={index}>
+                    <a
+                      href={link}
+                      className="social-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {artist}
+                    </a>
+                  </li>
+                )
+              )}
+            </ul>
           </div>
           <div className="row-container">
             <span className="row-header">organizer@eventemail.com</span>

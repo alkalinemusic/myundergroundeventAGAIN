@@ -8,9 +8,9 @@ export default function Header() {
       <Link to="/">
         <h1 className="header-page-header">My Underground Events</h1>
       </Link>
-      <Link className="header-page-header" to="/eventDetails/Id">
+      {/* <Link className="header-page-header" to="/eventDetails/Id">
         <h6>Details test page</h6>
-      </Link>
+      </Link> */}
       <Link className="header-page-header" to="/searchResults">
         <h6>Search Results test page</h6>
       </Link>

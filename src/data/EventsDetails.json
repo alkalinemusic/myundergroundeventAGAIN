@@ -13,7 +13,18 @@
       "description": "Experience a night of pure techno beats with top DJs in a vibrant cafe atmosphere.",
       "pictures": [
         "https://i.postimg.cc/VsK6qyD4/DALL-E-2024-05-26-11-10-31-A-digital-flyer-for-a-techno-music-event-titled-A-Night-of-Techno-fea.webp"
-      ]
+      ],
+      "organizerSocialMedia": {
+        "facebook": "https://www.facebook.com/technoEventOrg",
+        "instagram": "https://www.instagram.com/technoEventOrg",
+        "twitter": "https://twitter.com/technoEventOrg"
+      },
+      "artistsLinks": {
+        "NXOR": "https://www.instagram.com/nxor",
+        "NoizCode": "https://www.instagram.com/noizcode",
+        "Switch Angel": "https://www.instagram.com/switchangel"
+      },
+      "organizerEmail": "organizer@technoevent.com"
     },
     {
       "id": 2,
@@ -28,7 +39,18 @@
       "description": "Join us for a summer night filled with electrifying beats and a fantastic crowd.",
       "pictures": [
         "https://i.postimg.cc/4yxxDwNz/DALL-E-2024-05-26-11-10-51-A-digital-flyer-for-a-music-event-titled-Summer-Beats-featuring-artis.webp"
-      ]
+      ],
+      "organizerSocialMedia": {
+        "facebook": "https://www.facebook.com/summerBeatsOrg",
+        "instagram": "https://www.instagram.com/summerBeatsOrg",
+        "twitter": "https://twitter.com/summerBeatsOrg"
+      },
+      "artistsLinks": {
+        "DJ Echo": "https://www.instagram.com/djecho",
+        "BassHound": "https://www.instagram.com/basshound",
+        "Lyra": "https://www.instagram.com/lyra"
+      },
+      "organizerEmail": "organizer@summerbeats.com"
     },
     {
       "id": 3,
@@ -43,7 +65,18 @@
       "description": "A family-friendly event showcasing dynamic electronic music and dazzling performances.",
       "pictures": [
         "https://i.postimg.cc/B6gv7RsS/DALL-E-2024-05-26-11-11-56-A-digital-flyer-for-a-music-event-titled-Electro-Nights-featuring-art.webp"
-      ]
+      ],
+      "organizerSocialMedia": {
+        "facebook": "https://www.facebook.com/electroNightsOrg",
+        "instagram": "https://www.instagram.com/electroNightsOrg",
+        "twitter": "https://twitter.com/electroNightsOrg"
+      },
+      "artistsLinks": {
+        "Electra": "https://www.instagram.com/electra",
+        "Pulse": "https://www.instagram.com/pulse",
+        "Neon Dreams": "https://www.instagram.com/neondreams"
+      },
+      "organizerEmail": "organizer@electronights.com"
     },
     {
       "id": 4,
@@ -58,7 +91,18 @@
       "description": "Revive the rave scene with us; pulsating beats and a night of unforgettable energy await!",
       "pictures": [
         "https://i.postimg.cc/RhpZ4fN2/DALL-E-2024-05-26-11-12-05-A-digital-flyer-for-a-music-event-titled-Rave-Revival-featuring-artis.webp"
-      ]
+      ],
+      "organizerSocialMedia": {
+        "facebook": "https://www.facebook.com/raveRevivalOrg",
+        "instagram": "https://www.instagram.com/raveRevivalOrg",
+        "twitter": "https://twitter.com/raveRevivalOrg"
+      },
+      "artistsLinks": {
+        "Beat Crusher": "https://www.instagram.com/beatcrusher",
+        "Sonic Boom": "https://www.instagram.com/sonicboom",
+        "Vibe Tribe": "https://www.instagram.com/vibetribe"
+      },
+      "organizerEmail": "organizer@raverevival.com"
     },
     {
       "id": 5,
@@ -73,7 +117,90 @@
       "description": "Celebrate Halloween with spine-chilling music and a supernatural vibe in a haunted mansion.",
       "pictures": [
         "https://i.postimg.cc/PrNqK67H/e1c1d1e5-03cf-4e2f-8382-96bbbed5b676.webp"
-      ]
+      ],
+      "organizerSocialMedia": {
+        "facebook": "https://www.facebook.com/halloweenHowlOrg",
+        "instagram": "https://www.instagram.com/halloweenHowlOrg",
+        "twitter": "https://twitter.com/halloweenHowlOrg"
+      },
+      "artistsLinks": {
+        "Ghostly Grooves": "https://www.instagram.com/ghostlygrooves",
+        "Spooky Sounds": "https://www.instagram.com/spookysounds",
+        "Cryptic DJ": "https://www.instagram.com/crypticdj"
+      },
+      "organizerEmail": "organizer@halloweenhowl.com"
+    },
+    {
+      "id": 6,
+      "date": "November 5th",
+      "title": "Rock the Night",
+      "artists": "Thunderstruck, Blaze, The Rollers",
+      "venue": "Rock Arena",
+      "cost": "$35",
+      "ageRequirements": "All ages",
+      "typeOfEvent": "music",
+      "style": "rock",
+      "description": "Feel the energy of live rock music with an amazing lineup of bands.",
+      "pictures": [""],
+      "organizerSocialMedia": {
+        "facebook": "https://www.facebook.com/rockTheNightOrg",
+        "instagram": "https://www.instagram.com/rockTheNightOrg",
+        "twitter": "https://twitter.com/rockTheNightOrg"
+      },
+      "artistsLinks": {
+        "Thunderstruck": "https://www.instagram.com/thunderstruck",
+        "Blaze": "https://www.instagram.com/blaze",
+        "The Rollers": "https://www.instagram.com/therollers"
+      },
+      "organizerEmail": "organizer@rockthenight.com"
+    },
+    {
+      "id": 7,
+      "date": "December 25th",
+      "title": "Christmas Groove",
+      "artists": "Santa's Helpers, Snowfall, Jingle Beats",
+      "venue": "Winter Wonderland",
+      "cost": "$20",
+      "ageRequirements": "All ages",
+      "typeOfEvent": "music",
+      "style": "holiday",
+      "description": "Celebrate Christmas with festive music and holiday cheer.",
+      "pictures": [""],
+      "organizerSocialMedia": {
+        "facebook": "https://www.facebook.com/christmasGrooveOrg",
+        "instagram": "https://www.instagram.com/christmasGrooveOrg",
+        "twitter": "https://twitter.com/christmasGrooveOrg"
+      },
+      "artistsLinks": {
+        "Santa's Helpers": "https://www.instagram.com/santashelpers",
+        "Snowfall": "https://www.instagram.com/snowfall",
+        "Jingle Beats": "https://www.instagram.com/jinglebeats"
+      },
+      "organizerEmail": "organizer@christmasgroove.com"
+    },
+    {
+      "id": 8,
+      "date": "January 1st",
+      "title": "New Year's Bash",
+      "artists": "DJ Spark, Midnight Crew, Fireworks Band",
+      "venue": "Times Square",
+      "cost": "$50",
+      "ageRequirements": "21+",
+      "typeOfEvent": "music",
+      "style": "celebration",
+      "description": "Ring in the new year with a spectacular music bash and fireworks.",
+      "pictures": [""],
+      "organizerSocialMedia": {
+        "facebook": "https://www.facebook.com/newYearsBashOrg",
+        "instagram": "https://www.instagram.com/newYearsBashOrg",
+        "twitter": "https://twitter.com/newYearsBashOrg"
+      },
+      "artistsLinks": {
+        "DJ Spark": "https://www.instagram.com/djspark",
+        "Midnight Crew": "https://www.instagram.com/midnightcrew",
+        "Fireworks Band": "https://www.instagram.com/fireworksband"
+      },
+      "organizerEmail": "organizer@newyearsbash.com"
     }
   ]
 }
