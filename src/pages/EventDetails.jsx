@@ -1,25 +1,34 @@
 import "../CSS/EventDetails.css";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Image } from "antd";
 import localImageOne from "../assets/IMG_20240418_130845_818.jpg";
 import localImageTwo from "../assets/IMG-20240429-WA0003.jpg";
+import data from "../data/EventsDetails.json";
 
 export default function EventDetails() {
+  const { id } = useParams();
+  const event = data.events.find((event) => event.id === parseInt(id));
+
+  if (!event) {
+    return <div>Event not found</div>;
+  }
+
   return (
     <div className="event-details-main">
-      <h3 className="search-results-h3">A Night of Techno</h3>
+      <h3 className="search-results-h3">{event.title}</h3>
       <div className="artist-name-header">
-        <span className="artist-header row-header ">{/* Who */}</span>
-        <span className="with-abbr">w/&nbsp;&nbsp;</span>NXOR, NoizCode, Switch
-        Angel
+        <span className="artist-header row-header">Who</span>
+        <span className="with-abbr">w/&nbsp;&nbsp;</span>
+        {event.artists}
       </div>
       <div className="search-results-section">
         <section className="section-one-container">
           <div className="where-header">Where</div>
           <hr className="style-four-a" />
           <div className="venue-name-container">
-            <span className="row-header-venue ">
-              <span className="venue">Zuzu Middle East</span>
+            <span className="row-header-venue">
+              <span className="venue">{event.venue}</span>
+              {/* // TODO: add addresses to the EventDetails.json objects. then parse out here */}
               <br />
               474 Massachusetts Ave
               <br />
@@ -30,7 +39,7 @@ export default function EventDetails() {
           <hr className="style-four-a" />
           <div className="venue-when-container">
             <span className="row-header-when">
-              <span className="when">June 25th 8pm</span>
+              <span className="when">{event.date}</span>
             </span>
           </div>
         </section>
@@ -38,56 +47,22 @@ export default function EventDetails() {
           <section className="section-two-container row">
             <section className="section-two-left column">
               <div className="row-container">
-                <span className="row-header">$12 at door/ $8 RSVP</span>
+                <span className="row-header">{event.cost}</span>
               </div>
               <div className="row-container">
-                <span className="row-header">21+</span>
+                <span className="row-header">{event.ageRequirements}</span>
               </div>
               <div className="row-container">
-                <span className="row-header">Music Event</span>
+                <span className="row-header">{event.typeOfEvent}</span>
               </div>
               <div className="row-container">
-                <span className="row-header">Techno</span>
+                <span className="row-header">{event.style}</span>
               </div>
             </section>
-            <section className="section-two-left column">
-              {/* <div className="row-container">
-                <span className="row-header"></span>
-                <Link
-                  className="social-link"
-                  to="https://www.facebook.com/photo?fbid=1143031680445301&set=a.1143031697111966"
-                >
-                  Event Info
-                </Link>
-              </div>
-              <div className="row-container"> */}
-              {/* <span className="row-header">{/* Artist social links */}
-              {/* /</span> */}
-              {/* <Link
-                  className="social-link"
-                  to="https://www.instagram.com/noizcode/"
-                >
-                  Artist Info
-                </Link>
-              </div>
-              <div className="row-container">
-                <span className="row-header">organizer@eventemail.com</span>
-              </div> */}
-              {/* {" "} */}
-            </section>
-            {/* <div className="row-container">
-                <span className="row-header">
-                  Flyer
-                </span>
-              </div> */}
+            <section className="section-two-left column"></section>
           </section>
           <div className="event-description-container">
-            <div className="event-description">
-              Faro Cafe presents a night of immersive techno with NXOR,
-              NoizCode, and Switch Angel. Join us at Zuzu Middle East for a
-              night where the music speaks for itself and the dance floor
-              becomes your sanctuary.
-            </div>
+            <div className="event-description">{event.description}</div>
           </div>
         </section>
 
@@ -97,13 +72,22 @@ export default function EventDetails() {
               console.log(`current index: ${current}, prev index: ${prev}`),
           }}
         >
-          <Image className="flyer-poster-one" width={250} src={localImageOne} />
-          <Image className="flyer-poster-two" width={250} src={localImageTwo} />
+          {event.pictures.map((picture, index) => (
+            <Image
+              key={index}
+              src={picture}
+              alt={`Event ${event.id}`}
+              className="flyer-poster-one"
+            />
+          ))}
+          {/* THESE ARE PLACEHOLDERS */}
+          {/* <Image className="flyer-poster-one" width={250} src={localImageOne} />
+          <Image className="flyer-poster-two" width={250} src={localImageTwo} /> */}
         </Image.PreviewGroup>
         <section className="social-media-links-section">
           <div className="row-container">
             <span className="row-header">
-              {/* <stron>Event social links&nbsp;&nbsp;&nbsp;</stron g> */}
+              {/* <strong>Event social links&nbsp;&nbsp;&nbsp;</strong> */}
             </span>
             <Link
               className="social-link"

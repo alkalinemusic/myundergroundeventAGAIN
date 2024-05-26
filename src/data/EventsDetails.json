@@ -10,7 +10,10 @@
       "ageRequirements": "18+",
       "typeOfEvent": "music",
       "style": "techno",
-      "description": "Experience a night of pure techno beats with top DJs in a vibrant cafe atmosphere."
+      "description": "Experience a night of pure techno beats with top DJs in a vibrant cafe atmosphere.",
+      "pictures": [
+        "https://i.postimg.cc/VsK6qyD4/DALL-E-2024-05-26-11-10-31-A-digital-flyer-for-a-techno-music-event-titled-A-Night-of-Techno-fea.webp"
+      ]
     },
     {
       "id": 2,
@@ -22,7 +25,10 @@
       "ageRequirements": "21+",
       "typeOfEvent": "music",
       "style": "electronic",
-      "description": "Join us for a summer night filled with electrifying beats and a fantastic crowd."
+      "description": "Join us for a summer night filled with electrifying beats and a fantastic crowd.",
+      "pictures": [
+        "https://i.postimg.cc/4yxxDwNz/DALL-E-2024-05-26-11-10-51-A-digital-flyer-for-a-music-event-titled-Summer-Beats-featuring-artis.webp"
+      ]
     },
     {
       "id": 3,
@@ -34,7 +40,10 @@
       "ageRequirements": "All ages",
       "typeOfEvent": "music",
       "style": "electronic",
-      "description": "A family-friendly event showcasing dynamic electronic music and dazzling performances."
+      "description": "A family-friendly event showcasing dynamic electronic music and dazzling performances.",
+      "pictures": [
+        "https://i.postimg.cc/B6gv7RsS/DALL-E-2024-05-26-11-11-56-A-digital-flyer-for-a-music-event-titled-Electro-Nights-featuring-art.webp"
+      ]
     },
     {
       "id": 4,
@@ -46,7 +55,10 @@
       "ageRequirements": "18+",
       "typeOfEvent": "music",
       "style": "rave",
-      "description": "Revive the rave scene with us; pulsating beats and a night of unforgettable energy await!"
+      "description": "Revive the rave scene with us; pulsating beats and a night of unforgettable energy await!",
+      "pictures": [
+        "https://i.postimg.cc/RhpZ4fN2/DALL-E-2024-05-26-11-12-05-A-digital-flyer-for-a-music-event-titled-Rave-Revival-featuring-artis.webp"
+      ]
     },
     {
       "id": 5,
@@ -58,7 +70,10 @@
       "ageRequirements": "21+",
       "typeOfEvent": "music",
       "style": "spooky",
-      "description": "Celebrate Halloween with spine-chilling music and a supernatural vibe in a haunted mansion."
+      "description": "Celebrate Halloween with spine-chilling music and a supernatural vibe in a haunted mansion.",
+      "pictures": [
+        "https://i.postimg.cc/PrNqK67H/e1c1d1e5-03cf-4e2f-8382-96bbbed5b676.webp"
+      ]
     }
   ]
 }
