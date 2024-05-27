@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { supabase } from "./../lib/helper/supabaseClient";
+import "../CSS/Loginbutton.css";
+
+//  spacing because VS CODE is obnoxious
 
 export default function LoginButton() {
   const [user, setUser] = useState(null);
@@ -55,10 +58,14 @@ export default function LoginButton() {
       {user ? (
         <div>
           <h3>Authenticated!</h3>
-          <button onClick={logout}>Logout</button>
+          <button className="loginOut-buttons" onClick={logout}>
+            Logout
+          </button>
         </div>
       ) : (
-        <button onClick={githubLogin}>Login with Github</button>
+        <button className="loginOut-buttons" onClick={githubLogin}>
+          Login with Github
+        </button>
       )}
     </div>
   );
