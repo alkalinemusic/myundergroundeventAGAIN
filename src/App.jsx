@@ -9,6 +9,7 @@ import "./index.css";
 import "./App.css";
 import EventDetails from "./pages/EventDetails";
 import SearchResults from "./pages/SearchResults";
+import FetchEventData from "./utils/FetchEventData";
 
 // Make sure to uncomment and import these components if they are used.
 // import Home from "./components/Home";
@@ -17,6 +18,7 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
+      <FetchEventData />
       <Routes>
         <Route path={"/"} element={<BigButtons />} />
         {/* Ensure these are using the `element` prop for React Router v6 */}
