@@ -3,22 +3,27 @@ import { supabase } from "../lib/helper/supabaseClient";
 
 const FetchEventData = () => {
   useEffect(() => {
-    const fetchVenueName = async () => {
+    const fetchVenueNames = async () => {
       const { data, error } = await supabase
         .from("Events")
-        .select("venue")
-        .eq("id", 3)
-        .single();
+        .select("id, date, description, artists, venue");
 
       if (error) {
-        console.error("Error fetching venue naem:", error);
+        console.error("Error fetching venue names:", error);
       } else {
-        console.log("Venue name", data.venue);
+        data.forEach((event) => {
+          //   console.log(
+          //     `Event ID: ${event.id}, Venue name: ${event.venue},
+          //     Date: ${event.date}, Artists: ${event.artists}, Description: ${event.description}`
+          //   );
+        });
       }
     };
-    fetchVenueName();
+
+    fetchVenueNames();
   }, []);
-  return <div>Check the console for the venue name of event ID 3.</div>;
+
+  return <div>Check the console for the venue names of all events.</div>;
 };
 
 export default FetchEventData;
