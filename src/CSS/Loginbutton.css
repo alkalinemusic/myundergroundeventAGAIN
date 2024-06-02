@@ -7,3 +7,15 @@
   font-style: normal;
   border-style: none;
 }
+
+.login-buttons {
+  background-color: var(--fourth-color);
+  color: var(--first-color);
+  padding: 7px 15px;
+  border-radius: 5px;
+  font-size: medium;
+  font-style: normal;
+  border-style: none;
+  margin-bottom: 18px;
+  width: 200px;
+}

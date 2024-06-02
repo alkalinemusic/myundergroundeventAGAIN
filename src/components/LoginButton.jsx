@@ -49,6 +49,18 @@ export default function LoginButton() {
     });
   };
 
+  const facebookLogin = async () => {
+    await supabase.auth.signInWithOAuth({
+      provider: "facebook",
+    });
+  };
+
+  const googleLogin = async () => {
+    await supabase.auth.signInWithOAuth({
+      provider: "google",
+    });
+  };
+
   const logout = async () => {
     await supabase.auth.signOut();
   };
@@ -63,9 +75,24 @@ export default function LoginButton() {
           </button>
         </div>
       ) : (
-        <button className="loginOut-buttons" onClick={githubLogin}>
-          Login with Github
-        </button>
+        <>
+          <div>
+            <button className="login-buttons" onClick={githubLogin}>
+              Login with Github
+            </button>
+          </div>
+          <div>
+            <button className="login-buttons" onClick={facebookLogin}>
+              Login with Facebook
+            </button>
+          </div>
+
+          <div>
+            <button className="login-buttons" onClick={googleLogin}>
+              Login with Google
+            </button>
+          </div>
+        </>
       )}
     </div>
   );
