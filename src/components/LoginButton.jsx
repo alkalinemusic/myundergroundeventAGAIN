@@ -30,7 +30,7 @@ export default function LoginButton() {
       if (error) {
         console.error("Error fetching session:", error);
       } else {
-        console.log("you did it!");
+        console.log("Fetching succesful!");
       }
 
       return authListener?.unsubscribe;

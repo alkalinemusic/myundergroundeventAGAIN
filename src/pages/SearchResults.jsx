@@ -1,13 +1,29 @@
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { supabase } from "../lib/helper/supabaseClient";
 import "../CSS/SearchResultsStyle.css";
-import EventDetails from "./EventDetails";
-import { Link } from "react-router-dom"; // Make sure this is imported
-import data from "../data/EventsDetails.json";
 
 export default function SearchResults() {
+  const [events, setEvents] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchEvents = async () => {
+      const { data, error } = await supabase.from("Events").select("*");
+
+      if (error) {
+        console.error("Error fetching events:", error);
+      } else {
+        setEvents(data);
+      }
+      setLoading(false);
+    };
+
+    fetchEvents();
+  }, []);
+
   const loopArrayObject = () => {
-    return data.events.map((event) => (
-      // this will need updating to accept the actual event ID
-      // to={`/event/${event.id}`}
+    return events.map((event) => (
       <Link key={event.id} to={`/eventDetails/${event.id}`}>
         <div key={event.id} className="result-detail-container">
           <div className="border-top-line"></div>
@@ -19,6 +35,10 @@ export default function SearchResults() {
       </Link>
     ));
   };
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <section className="search-results-container">
