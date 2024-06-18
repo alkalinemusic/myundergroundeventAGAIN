@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { supabase } from "../lib/helper/supabaseClient";
 import "../CSS/SearchResultsStyle.css";
+import dayjs from "dayjs";
 
 export default function SearchResults() {
   const [events, setEvents] = useState([]);
@@ -23,17 +24,21 @@ export default function SearchResults() {
   }, []);
 
   const loopArrayObject = () => {
-    return events.map((event) => (
-      <Link key={event.id} to={`/eventDetails/${event.id}`}>
-        <div key={event.id} className="result-detail-container">
-          <div className="border-top-line"></div>
-          <div className="detail-date">{event.date}</div>
-          <div className="detail-title">{event.title}</div>
-          <div className="detail-artists">{event.artists}</div>
-          <div className="detail-venue">{event.venue}</div>
-        </div>
-      </Link>
-    ));
+    return events.map((event) => {
+      const isoDate = dayjs(event.date).format("MMMM DD, YYYY");
+      return (
+        <Link key={event.id} to={`/eventDetails/${event.id}`}>
+          <div key={event.id} className="result-detail-container">
+            <div className="border-top-line"></div>
+            <div className="detail-date">{isoDate}</div>{" "}
+            {/* Display ISO date */}
+            <div className="detail-title">{event.title}</div>
+            <div className="detail-artists">{event.artists}</div>
+            <div className="detail-venue">{event.venue}</div>
+          </div>
+        </Link>
+      );
+    });
   };
 
   if (loading) {

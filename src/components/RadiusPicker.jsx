@@ -4,7 +4,11 @@ const handleChange = (value) => {
   console.log(`selected ${value}`);
 };
 
-export default function RadiusPicker() {
+export default function RadiusPicker({ setRadius }) {
+  const handleChange = (value) => {
+    console.log("value", value);
+    setRadius(value);
+  };
   return (
     <div>
       <div className="radius-input-header">
