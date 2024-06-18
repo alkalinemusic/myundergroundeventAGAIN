@@ -61,7 +61,8 @@ a:active {
   color: var(--forth-color);
 }
 
-.social-links-ul {
+.social-links-ul,
+.event-email {
   list-style-type: none;
   margin: 15px;
   padding: 0;

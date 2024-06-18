@@ -40,6 +40,7 @@ export default function EventDetails() {
     ? event.artistSocials.split(",")
     : [];
   const dateFormatted = dayjs(event.date).format("MMMM DD, YYYY");
+  const eventTypeCapitalized = event.eventType;
 
   return (
     <div className="event-details-main">
@@ -86,10 +87,17 @@ export default function EventDetails() {
                 <span className="row-header">{event.ageReq}</span>
               </div>
               <div className="row-container">
-                <span className="row-header">{event.eventType}</span>
+                <span className="row-header">
+                  <strong>Type:</strong> &nbsp;
+                  {event.eventType.charAt(0).toUpperCase() +
+                    event.eventType.slice(1)}
+                </span>
               </div>
               <div className="row-container">
-                <span className="row-header">{event.style}</span>
+                <span className="row-header">
+                  <strong>Style:</strong> &nbsp;
+                  {event.style.charAt(0).toUpperCase() + event.style.slice(1)}
+                </span>
               </div>
             </section>
             <section className="section-two-left column"></section>
@@ -140,7 +148,9 @@ export default function EventDetails() {
             </ul>
           </div>
           <div className="row-container">
-            <span className="row-header">Artist social links</span>
+            <span className="row-header">
+              <strong>Artist social links</strong>
+            </span>
             <ul className="social-links-ul">
               {artistSocials.map((link, index) => (
                 <li key={index}>
@@ -157,7 +167,12 @@ export default function EventDetails() {
             </ul>
           </div>
           <div className="row-container">
-            <span className="row-header">{event.orgEmail}</span>
+            <span className="row-header">
+              <strong>Event Organizer</strong>
+            </span>
+            <br />
+            <br />
+            <span className="event-email">{event.orgEmail}</span>
           </div>
         </section>
       </div>
