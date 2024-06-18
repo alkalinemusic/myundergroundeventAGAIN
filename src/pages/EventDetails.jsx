@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { supabase } from "../lib/helper/supabaseClient";
 import { Image } from "antd";
 import "../CSS/EventDetails.css";
+import dayjs from "dayjs";
 
 export default function EventDetails() {
   const { id } = useParams();
@@ -38,6 +39,7 @@ export default function EventDetails() {
   const artistSocials = event.artistSocials
     ? event.artistSocials.split(",")
     : [];
+  const dateFormatted = dayjs(event.date).format("MMMM DD, YYYY");
 
   return (
     <div className="event-details-main">
@@ -70,7 +72,7 @@ export default function EventDetails() {
           <hr className="style-four-a" />
           <div className="venue-when-container">
             <span className="row-header-when">
-              <span className="when">{event.date}</span>
+              <span className="when">{dateFormatted}</span>
             </span>
           </div>
         </section>
