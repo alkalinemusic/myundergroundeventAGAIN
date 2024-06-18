@@ -6,6 +6,7 @@
 } */
 /* Common layout adjustments for mobile */
 /* Responsive Layout Adjustments */
+/* 1920, 1280, 720,  */
 @media (min-width: 390px) {
   .container {
     max-width: 390px;
