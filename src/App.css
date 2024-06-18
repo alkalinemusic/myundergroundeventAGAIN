@@ -38,11 +38,14 @@
   :root {
     --background-color: #f0f0f0;
     --button-bg: #e0e0e0;
-  }
-
-  body {
-    text-align: left;
-    padding: 2rem 5%;
+    }
+    
+    body {
+      text-align: left;
+      padding: 2rem 5%;
+      min-height: 100vh;
+      gap: 20px;
+      margin-top: 20%;
   }
 
   .container {
@@ -67,10 +70,10 @@
   flex-direction: column;
   align-items: center;
   /* justify-content: center; */
-  min-height: 100vh;
-  gap: 20px;
-  margin-top: 20%; /* Adds top margin to push content down */
-}
+  /* min-height: 100vh; */
+  /* gap: 20px; */
+  /* margin-top: 20%; Adds top margin to push content down */
+} /* I have no idea why, but this error holds all my css in the correct places */
 
 .primary-home-btn,
 a {
